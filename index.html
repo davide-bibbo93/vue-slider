@@ -16,13 +16,17 @@
           <i class="fas fa-angle-left"></i>
         </div>
         <div class="images">
-          <img :src="photos[photoIndex]" alt="">
+          <img :src="photos[photoIndex]" :style="'width: 1200px;'" alt="">
         </div>
         <div class="next" @click="nextPhoto">
           <i class="fas fa-angle-right"></i>
         </div>
         <div class="nav">
-          <i v-for="element in photos" class="fas fa-circle" ></i>
+          <i v-for="(circle, index) in photos"
+          class="fas fa-circle"
+          :class="(index === photoIndex) ? 'active' : ''"
+          @click="setCircle(index)"
+          ></i>
         </div>
       </div>
     </div>
