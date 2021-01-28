@@ -3,7 +3,6 @@ new Vue({
   el: "#app",
   data: {
     photoIndex: 0,
-    keyCode: '',
     photos: [
       "img/img1.jpg",
       "img/img2.jpg",
@@ -28,8 +27,8 @@ new Vue({
         this.photoIndex = this.photos.length - 1;
       }
     },
-    setCircle: function (index) {
-      this.photoIndex = index;
+    setCircle: function (newIndex) {
+      this.photoIndex = newIndex;
     },
   }
 });
